@@ -1,0 +1,22 @@
+{
+  "name": "myplayground",
+  "version": "1.0.0",
+  "description": "test my own code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "api",
+    "and",
+    "other"
+  ],
+  "author": "Sudipta Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0",
+    "yargs": "^11.0.0"
+  }
+}
