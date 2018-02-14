@@ -13,4 +13,8 @@ app.get('/',(request,response)=>{
 app.get('/about',(req,resp)=>{
   resp.send('About Page');
 });
+
+app.get('/contact',(req,resp)=>{
+  resp.send('<h1>Contact Page</h1>')
+});
 app.listen(3000);
