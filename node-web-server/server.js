@@ -7,6 +7,9 @@ hbs.registerPartials(__dirname+'/views/partials');
 hbs.registerHelper('getCurrentYear',()=>{
   return new Date().getFullYear();
 });
+hbs.registerHelper('upperCase',(txt)=>{
+  return txt.toUpperCase();
+});
 app.use(express.static(__dirname+'/public'));
 
 app.set('view engine','hbs');
