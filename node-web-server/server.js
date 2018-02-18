@@ -1,5 +1,6 @@
 const express=require('express');
 const hbs=require('hbs');
+const fs =require('fs');
 var app=express();
 
 hbs.registerPartials(__dirname+'/views/partials');
@@ -10,8 +11,21 @@ hbs.registerHelper('getCurrentYear',()=>{
 hbs.registerHelper('upperCase',(txt)=>{
   return txt.toUpperCase();
 });
-app.use(express.static(__dirname+'/public'));
+app.use((req,res,next)=>{
+  var log=new Date().toString();
+  var logTxt=`${log}: ${req.method} ${req.url} \n`;
+  fs.appendFile('log.txt',logTxt,(error)=>{
+    if(error){
+      console.log(error);
+    }
+  });
+  res.render('maintenance.hbs',{
+    welcomeMessage:`We'll be wight back`,
+    pageTitle: `Maintenance Title`
+  });
 
+});
+app.use(express.static(__dirname+'/public'));
 app.set('view engine','hbs');
 
 
