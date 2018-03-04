@@ -5,6 +5,12 @@ it('should add two numbers',()=>{
     throw new Error(`Expected 44, but got ${res}`);
   }
 });
+it('should minus two numbers',()=>{
+  var res=utils.add(33,11);
+  if(res !== 22){
+    throw new Error(`Expected 22, but got ${res}`);
+  }
+});
 
 it('should square a number',()=>{
   var res1=utils.square(3);
