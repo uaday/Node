@@ -9,6 +9,20 @@ it('should add two numbers',()=>{
   //   throw new Error(`Expected 44, but got ${res}`);
   // }
 });
+it('should async add two numbers', (done)=>{
+  utils.asyncAdd(4,3,(sum)=>{
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
+});
+
+it('should async square one number',(done)=>{
+  utils.asyncSquare(3,(res)=>{
+    expect(res).toBe(3).toBeA('number');
+    done();
+  });
+});
+
 it('should minus two numbers',()=>{
   var res=utils.min(33,11);
   expect(res).toExist().toBe(22).toBeA('number');
@@ -24,6 +38,8 @@ it('should square a number',()=>{
   // }
 });
 
+
+
 it('should verify first name and last name',()=>{
   var user={
     age:23,
@@ -33,6 +49,8 @@ it('should verify first name and last name',()=>{
   // expect(user).toEqual(res);
   expect(res).toInclude({firstName: 'Sudipta',lastName: 'Ghosh'});
 });
+
+
 
 // it('should expect some value',()=>{
 //     //expect(12).toNotBe(12);
