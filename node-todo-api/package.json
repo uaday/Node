@@ -9,6 +9,8 @@
   "author": "Sudipta Ghosh",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
     "mongodb": "^3.0.5",
     "mongoose": "^5.0.15"
   }
