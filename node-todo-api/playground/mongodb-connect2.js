@@ -15,7 +15,7 @@ MongoClient.connect(url,(err,client)=>{
     if(err){
       return console.log('Unable to insert todo',err);
     }
-    console.log(JSON.stringify(result.ops.[0],undefined,2));
+    console.log(JSON.stringify(result.ops,undefined,2));
   });
   client.close();
 });
