@@ -15,12 +15,26 @@ app.post('/todos',(req,res)=>{
     });
 
     todo.save().then((doc)=>{
-        res.send(doc);
+        res.status(200).send(doc);
     },(e)=>{
         res.status(400).send(e);
         
     })
 });
+
+app.get('/todos',(req,res)=>{
+    Todo.find().then((todos)=>{
+        res.status(200).send({
+            result:todos,
+            message:'Successfull',
+            status:200
+        });
+    },(e)=>{
+        res.status(400).send(e);
+    })
+},(e)=>{
+    res.status(400).send(e);
+})
 
 app.listen(3000,()=>{
     console.log('Started on port 3000');
