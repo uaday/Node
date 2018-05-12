@@ -72,7 +72,7 @@ app.listen(3000,()=>{
 });
 
 
-// module.exports={app};
+module.exports={app};
 
 // const newTodo=new Todo({
 //     text:'Testing Text'
