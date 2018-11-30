@@ -12,7 +12,7 @@ async function process(value){
             }else{
                 reject('Invalid Peramiter');
             }
-        },100)
+        },200)
     });
 }
 
