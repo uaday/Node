@@ -11,9 +11,9 @@
   "author": "Sudipta Ghosh",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.19.2",
     "expect": "^22.4.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "mocha": "^5.1.1",
     "mongodb": "^3.0.5",
     "mongoose": "^5.0.15",
